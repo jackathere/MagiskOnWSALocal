@@ -135,9 +135,9 @@ jobs:
           cookie = doc.getElementsByTagName('EncryptedData')[0].firstChild.nodeValue
 
           print(cookie)
-
+          user = ''
           with open(Path.home() / "WUIDRequest.xml", "r") as f:
-            cat_id_content = f.read().format(cookie)
+            cat_id_content = f.read().format(user, cookie, cat_id, release_type)
 
           out = requests.post(
               'https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx',
