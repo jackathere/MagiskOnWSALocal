@@ -99,7 +99,7 @@ jobs:
       - name: Dependencies
         run: |
           sudo apt-get update && sudo apt-get install setools lzip wine winetricks patchelf
-          wget -qO- "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/archive/$GITHUB_REF.tar.gz" | sudo tar --wildcards -zxvf- -C ~ --strip-component=2 '*/wine/*' '*/linker/*' '*/xml/*'
+          wget -qO- "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/archive/$GITHUB_REF.tar.gz" | sudo tar --wildcards -zxvf- -C ~ --strip-component=2  '*/linker/*' '*/xml/*'
           winetricks msxml6
       - name: Download WSA
         shell: python
