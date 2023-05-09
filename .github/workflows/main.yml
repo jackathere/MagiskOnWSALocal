@@ -66,7 +66,7 @@ on:
 
 jobs:
   matrix:
-    runs-on: Debian
+    runs-on: ubuntu
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
@@ -91,7 +91,7 @@ jobs:
             core.setOutput("matrix",JSON.stringify(matrix));
 
   build:
-    runs-on: Debian
+    runs-on: ubuntu
     needs: matrix
     strategy:
       matrix: ${{fromJson(needs.matrix.outputs.matrix)}}
