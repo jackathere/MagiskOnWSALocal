@@ -137,7 +137,7 @@ jobs:
           print(cookie)
 
           with open(Path.home() / "WUIDRequest.xml", "r") as f:
-            cat_id_content = f.read().format(cookie, '858014f3-3934-4abe-8078-4aa193e74ca8', 'Retail')
+            cat_id_content = f.read().format(cookie)
 
           out = requests.post(
               'https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx',
