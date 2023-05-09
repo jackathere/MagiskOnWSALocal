@@ -66,7 +66,7 @@ on:
 
 jobs:
   matrix:
-    runs-on: debian-latest
+    runs-on: Debian
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
